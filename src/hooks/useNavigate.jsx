@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useNavigate = (min, max) => {
+export const useNavigate = (min, max) => {
   const [currentStep, setCurrentStep] = useState(0);
 
   const nextStep = () => setCurrentStep(currentStep + 1);
@@ -20,5 +20,3 @@ const useNavigate = (min, max) => {
 
   return { currentStep, nextStep, prevStep };
 };
-
-export default useNavigate;
